@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SUEnableInstallerLauncherService</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>https://seclook.app/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>r2hR7GbQE8ohNe7YrzQfRQg6GnF/l6FWSQ3fUMcbIGs=</string>
+</dict>
+</plist>

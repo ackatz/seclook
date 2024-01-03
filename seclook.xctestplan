@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "C6F8D2C9-423C-4120-B147-5620A0B3D666",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:seclook.xcodeproj",
+      "identifier" : "D8058A9D2B06CE51003D9F37",
+      "name" : "seclook"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:seclook.xcodeproj",
+        "identifier" : "D8058AAE2B06CE52003D9F37",
+        "name" : "seclookTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:seclook.xcodeproj",
+        "identifier" : "D8058AB82B06CE52003D9F37",
+        "name" : "seclookUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

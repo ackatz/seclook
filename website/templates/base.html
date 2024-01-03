@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="{% block viewport %}width=device-width, initial-scale=1.0{% endblock viewport %}"
+    />
+
+         <meta
+            name="image"
+            property="og:image"
+            content="https://seclook.app/static/AppIcon.png">
+          <meta
+            name="twitter:image"
+            content="https://seclook.app/static/AppIcon.png">
+
+        <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+
+
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="{% block meta_description %}seclook is a macOS/Swift app that sits in the background and monitors your clipboard, sending any IP, SHA2/MD5 hash, or domain to VirusTotal and AbuseIPDB. If any scanned item has a bad reputation score, you get a notification!{% endblock meta_description %}"
+    />
+
+    <!-- Meta Keywords -->
+    <meta
+      name="keywords"
+      content="{% block meta_keywords %}seclook, swift, clipboard, security, infosec, cyber, lookup{% endblock meta_keywords %}"
+    />
+
+    <!-- Author Meta -->
+    <meta
+      name="author"
+      content="{% block meta_author %}Andrew Katz{% endblock meta_author %}"
+    />
+
+    <!-- Open Graph Tags for Facebook and LinkedIn -->
+    <meta
+      property="og:title"
+      content="{% block og_title %}seclook{% endblock og_title %}"
+    />
+    <meta
+      property="og:description"
+      content="{% block og_description %}seclook is a macOS/Swift app that sits in the background and monitors your clipboard, sending any IP, SHA2/MD5 hash, or domain to VirusTotal and AbuseIPDB. If any scanned item has a bad reputation score, you get a notification!{% endblock og_description %}"
+    />
+    <meta
+      property="og:url"
+      content="{% block og_url %}https://seclook.app{% endblock og_url %}"
+    />
+    <meta
+      property="og:site_name"
+      content="{% block og_site_name %}seclook{% endblock og_site_name %}"
+    />
+
+    <!-- Twitter Card Tags -->
+    <meta
+      name="twitter:card"
+      content="{% block twitter_card %}summary{% endblock twitter_card %}"
+    />
+    <meta
+      name="twitter:title"
+      content="{% block twitter_title %}seclook{% endblock twitter_title %}"
+    />
+    <meta
+      name="twitter:description"
+      content="{% block twitter_description %}seclook is a macOS/Swift app that sits in the background and monitors your clipboard, sending any IP, SHA2/MD5 hash, or domain to VirusTotal and AbuseIPDB. If any scanned item has a bad reputation score, you get a notification!{% endblock twitter_description %}"
+    />
+
+    {% block title %}
+    <title>seclook</title>
+    {% endblock title %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.counter.dev/script.js" data-id="bb924a97-31a1-4dfb-8076-3b1073b0ce8d" data-utcoffset="-7"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <style>
+      body.sidebar-open {
+        overflow: hidden;
+      }
+      #sidebar {
+        transition: transform 0.3s ease-in-out;
+        width: 75%;
+        max-width: 300px;
+      }
+      body.sidebar-open #sidebar {
+        transform: translateX(0);
+      }
+      html {
+        overflow-y: scroll;
+      }
+    </style>
+    {% block head %}{% endblock head %}
+  </head>
+
+  <body class="bg-black text-white">
+
+    {% block content %} {% endblock content %}
+
+  </body>
+</html>

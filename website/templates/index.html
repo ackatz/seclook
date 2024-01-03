@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% endblock head %}
+
+{% block title %}
+<title>seclook | Automatic security lookups from your clipboard</title>
+{% endblock title %}
+
+{% block page_title %}seclook{% endblock page_title %}
+
+{% block content %}
+<body class="bg-black text-white font-sans">
+
+    <div class="container mx-auto px-4">
+        <header class="text-center py-16">
+            <div class="flex justify-center items-center mb-6">
+                <img src="static/AppIcon.svg" alt="App Icon" class="h-16 w-16 mr-4"/>
+                <h1 class="text-5xl font-bold">seclook</h1>
+            </div>
+            <p class="text-xl mb-4">Automatic security lookups from your clipboard</p>
+            <a href="https://github.com/ackatz/seclook" class="text-white font-bold text-lg bg-blue-500 hover:bg-blue-700 px-6 py-2 rounded-md transition duration-300">
+                Download
+            </a>
+        </header>
+
+        <section class="text-center">
+
+            <img src="static/notification.svg" alt="Notification Icon" class="mx-auto"/>
+            <img src="static/ui.svg" alt="UI Preview" class="mx-auto"/>
+
+       </section>
+
+          <footer>
+      <div
+        class="text-center"
+      >
+        <span
+          class="text-sm text-white sm:text-center"
+          >© 2023
+          <a href="https://akatz.org" class="hover:underline">Andrew Katz</a
+          >. All Rights Reserved.
+        </span>
+      </div>
+    </footer>
+
+    </div>
+
+{% endblock content %}
+

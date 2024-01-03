@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8058AA22B06CE51003D9F37 /* seclookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8058AA12B06CE51003D9F37 /* seclookApp.swift */; };
+		D8058AA42B06CE51003D9F37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8058AA32B06CE51003D9F37 /* ContentView.swift */; };
+		D8058AA62B06CE52003D9F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8058AA52B06CE52003D9F37 /* Assets.xcassets */; };
+		D8058AA92B06CE52003D9F37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8058AA82B06CE52003D9F37 /* Preview Assets.xcassets */; };
+		D8058ABE2B06CE52003D9F37 /* seclookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8058ABD2B06CE52003D9F37 /* seclookUITests.swift */; };
+		D8058ACD2B06D56F003D9F37 /* ClipboardMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8058ACC2B06D56F003D9F37 /* ClipboardMonitor.swift */; };
+		D8058ACF2B06E385003D9F37 /* IgnoreListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8058ACE2B06E385003D9F37 /* IgnoreListManager.swift */; };
+		D8058AD92B07EFBD003D9F37 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8058AD82B07EFBD003D9F37 /* ConfigManager.swift */; };
+		D8058ADB2B07EFEB003D9F37 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8058ADA2B07EFEB003D9F37 /* APIService.swift */; };
+		D8058ADD2B07F060003D9F37 /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8058ADC2B07F060003D9F37 /* ConfigurationView.swift */; };
+		D8058ADF2B0829CC003D9F37 /* UserNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8058ADE2B0829CC003D9F37 /* UserNotifications.swift */; };
+		D84EEB1E2B44BE7C00AD7B13 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = D84EEB1D2B44BE7C00AD7B13 /* Sparkle */; };
+		D86BD3272B437B99008CBE03 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D86BD3262B437B99008CBE03 /* Credits.rtf */; };
+		D86BD32B2B4385DC008CBE03 /* IgnoreListManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86BD3292B4385B0008CBE03 /* IgnoreListManagerTests.swift */; };
+		D86BD32E2B43860D008CBE03 /* ConfigManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86BD32C2B4385FC008CBE03 /* ConfigManagerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8058AB02B06CE52003D9F37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8058A962B06CE51003D9F37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8058A9D2B06CE51003D9F37;
+			remoteInfo = seclook;
+		};
+		D8058ABA2B06CE52003D9F37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8058A962B06CE51003D9F37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8058A9D2B06CE51003D9F37;
+			remoteInfo = seclook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D8058A9E2B06CE51003D9F37 /* seclook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seclook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8058AA12B06CE51003D9F37 /* seclookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seclookApp.swift; sourceTree = "<group>"; };
+		D8058AA32B06CE51003D9F37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D8058AA52B06CE52003D9F37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8058AA82B06CE52003D9F37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D8058AAA2B06CE52003D9F37 /* seclook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = seclook.entitlements; sourceTree = "<group>"; };
+		D8058AAF2B06CE52003D9F37 /* seclookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = seclookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8058AB92B06CE52003D9F37 /* seclookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = seclookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8058ABD2B06CE52003D9F37 /* seclookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seclookUITests.swift; sourceTree = "<group>"; };
+		D8058ACC2B06D56F003D9F37 /* ClipboardMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMonitor.swift; sourceTree = "<group>"; };
+		D8058ACE2B06E385003D9F37 /* IgnoreListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreListManager.swift; sourceTree = "<group>"; };
+		D8058AD82B07EFBD003D9F37 /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
+		D8058ADA2B07EFEB003D9F37 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		D8058ADC2B07F060003D9F37 /* ConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationView.swift; sourceTree = "<group>"; };
+		D8058ADE2B0829CC003D9F37 /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
+		D8381FB12B43996700200FB7 /* seclook.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = seclook.xctestplan; sourceTree = "<group>"; };
+		D84EEB232B44C41900AD7B13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D85D231A2B44A73B003D9F96 /* seclookRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = seclookRelease.entitlements; sourceTree = "<group>"; };
+		D86BD3262B437B99008CBE03 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		D86BD3292B4385B0008CBE03 /* IgnoreListManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreListManagerTests.swift; sourceTree = "<group>"; };
+		D86BD32C2B4385FC008CBE03 /* ConfigManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManagerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8058A9B2B06CE51003D9F37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D84EEB1E2B44BE7C00AD7B13 /* Sparkle in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8058AAC2B06CE52003D9F37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8058AB62B06CE52003D9F37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8058A952B06CE51003D9F37 = {
+			isa = PBXGroup;
+			children = (
+				D8381FB12B43996700200FB7 /* seclook.xctestplan */,
+				D8058AA02B06CE51003D9F37 /* seclook */,
+				D8058ABC2B06CE52003D9F37 /* seclookUITests */,
+				D8058A9F2B06CE51003D9F37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8058A9F2B06CE51003D9F37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8058A9E2B06CE51003D9F37 /* seclook.app */,
+				D8058AAF2B06CE52003D9F37 /* seclookTests.xctest */,
+				D8058AB92B06CE52003D9F37 /* seclookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8058AA02B06CE51003D9F37 /* seclook */ = {
+			isa = PBXGroup;
+			children = (
+				D84EEB232B44C41900AD7B13 /* Info.plist */,
+				D85D231A2B44A73B003D9F96 /* seclookRelease.entitlements */,
+				D86BD3282B438590008CBE03 /* seclookTests */,
+				D8058AA12B06CE51003D9F37 /* seclookApp.swift */,
+				D8058AA32B06CE51003D9F37 /* ContentView.swift */,
+				D8058AA52B06CE52003D9F37 /* Assets.xcassets */,
+				D8058AAA2B06CE52003D9F37 /* seclook.entitlements */,
+				D8058AA72B06CE52003D9F37 /* Preview Content */,
+				D8058ACC2B06D56F003D9F37 /* ClipboardMonitor.swift */,
+				D8058ACE2B06E385003D9F37 /* IgnoreListManager.swift */,
+				D8058AD82B07EFBD003D9F37 /* ConfigManager.swift */,
+				D8058ADA2B07EFEB003D9F37 /* APIService.swift */,
+				D8058ADC2B07F060003D9F37 /* ConfigurationView.swift */,
+				D8058ADE2B0829CC003D9F37 /* UserNotifications.swift */,
+				D86BD3262B437B99008CBE03 /* Credits.rtf */,
+			);
+			path = seclook;
+			sourceTree = "<group>";
+		};
+		D8058AA72B06CE52003D9F37 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D8058AA82B06CE52003D9F37 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D8058ABC2B06CE52003D9F37 /* seclookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D8058ABD2B06CE52003D9F37 /* seclookUITests.swift */,
+			);
+			path = seclookUITests;
+			sourceTree = "<group>";
+		};
+		D86BD3282B438590008CBE03 /* seclookTests */ = {
+			isa = PBXGroup;
+			children = (
+				D86BD3292B4385B0008CBE03 /* IgnoreListManagerTests.swift */,
+				D86BD32C2B4385FC008CBE03 /* ConfigManagerTests.swift */,
+			);
+			path = seclookTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8058A9D2B06CE51003D9F37 /* seclook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8058AC32B06CE52003D9F37 /* Build configuration list for PBXNativeTarget "seclook" */;
+			buildPhases = (
+				D8058A9A2B06CE51003D9F37 /* Sources */,
+				D8058A9B2B06CE51003D9F37 /* Frameworks */,
+				D8058A9C2B06CE51003D9F37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = seclook;
+			packageProductDependencies = (
+				D84EEB1D2B44BE7C00AD7B13 /* Sparkle */,
+			);
+			productName = seclook;
+			productReference = D8058A9E2B06CE51003D9F37 /* seclook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D8058AAE2B06CE52003D9F37 /* seclookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8058AC62B06CE52003D9F37 /* Build configuration list for PBXNativeTarget "seclookTests" */;
+			buildPhases = (
+				D8058AAB2B06CE52003D9F37 /* Sources */,
+				D8058AAC2B06CE52003D9F37 /* Frameworks */,
+				D8058AAD2B06CE52003D9F37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8058AB12B06CE52003D9F37 /* PBXTargetDependency */,
+			);
+			name = seclookTests;
+			productName = seclookTests;
+			productReference = D8058AAF2B06CE52003D9F37 /* seclookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D8058AB82B06CE52003D9F37 /* seclookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8058AC92B06CE52003D9F37 /* Build configuration list for PBXNativeTarget "seclookUITests" */;
+			buildPhases = (
+				D8058AB52B06CE52003D9F37 /* Sources */,
+				D8058AB62B06CE52003D9F37 /* Frameworks */,
+				D8058AB72B06CE52003D9F37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8058ABB2B06CE52003D9F37 /* PBXTargetDependency */,
+			);
+			name = seclookUITests;
+			productName = seclookUITests;
+			productReference = D8058AB92B06CE52003D9F37 /* seclookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8058A962B06CE51003D9F37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					D8058A9D2B06CE51003D9F37 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					D8058AAE2B06CE52003D9F37 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = D8058A9D2B06CE51003D9F37;
+					};
+					D8058AB82B06CE52003D9F37 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = D8058A9D2B06CE51003D9F37;
+					};
+				};
+			};
+			buildConfigurationList = D8058A992B06CE51003D9F37 /* Build configuration list for PBXProject "seclook" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8058A952B06CE51003D9F37;
+			packageReferences = (
+				D84EEB1C2B44BE7C00AD7B13 /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
+			productRefGroup = D8058A9F2B06CE51003D9F37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8058A9D2B06CE51003D9F37 /* seclook */,
+				D8058AAE2B06CE52003D9F37 /* seclookTests */,
+				D8058AB82B06CE52003D9F37 /* seclookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8058A9C2B06CE51003D9F37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8058AA92B06CE52003D9F37 /* Preview Assets.xcassets in Resources */,
+				D86BD3272B437B99008CBE03 /* Credits.rtf in Resources */,
+				D8058AA62B06CE52003D9F37 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8058AAD2B06CE52003D9F37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8058AB72B06CE52003D9F37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8058A9A2B06CE51003D9F37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8058AA42B06CE51003D9F37 /* ContentView.swift in Sources */,
+				D8058ADD2B07F060003D9F37 /* ConfigurationView.swift in Sources */,
+				D8058ACF2B06E385003D9F37 /* IgnoreListManager.swift in Sources */,
+				D8058ADF2B0829CC003D9F37 /* UserNotifications.swift in Sources */,
+				D8058AA22B06CE51003D9F37 /* seclookApp.swift in Sources */,
+				D8058AD92B07EFBD003D9F37 /* ConfigManager.swift in Sources */,
+				D8058ADB2B07EFEB003D9F37 /* APIService.swift in Sources */,
+				D8058ACD2B06D56F003D9F37 /* ClipboardMonitor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8058AAB2B06CE52003D9F37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D86BD32B2B4385DC008CBE03 /* IgnoreListManagerTests.swift in Sources */,
+				D86BD32E2B43860D008CBE03 /* ConfigManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8058AB52B06CE52003D9F37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8058ABE2B06CE52003D9F37 /* seclookUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8058AB12B06CE52003D9F37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8058A9D2B06CE51003D9F37 /* seclook */;
+			targetProxy = D8058AB02B06CE52003D9F37 /* PBXContainerItemProxy */;
+		};
+		D8058ABB2B06CE52003D9F37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8058A9D2B06CE51003D9F37 /* seclook */;
+			targetProxy = D8058ABA2B06CE52003D9F37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D8058AC12B06CE52003D9F37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = Q48Q39Z6A9;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D8058AC22B06CE52003D9F37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = Q48Q39Z6A9;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		D8058AC42B06CE52003D9F37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = seclook/seclook.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"seclook/Preview Content\"";
+				DEVELOPMENT_TEAM = Q48Q39Z6A9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = seclook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = seclook;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© Andrew Katz 2024";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ackatz.seclook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D8058AC52B06CE52003D9F37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = seclook/seclookRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"seclook/Preview Content\"";
+				DEVELOPMENT_TEAM = Q48Q39Z6A9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = seclook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = seclook;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© Andrew Katz 2024";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ackatz.seclook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D8058AC72B06CE52003D9F37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ackatz.seclookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/seclook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/seclook";
+			};
+			name = Debug;
+		};
+		D8058AC82B06CE52003D9F37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = Q48Q39Z6A9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ackatz.seclookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/seclook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/seclook";
+			};
+			name = Release;
+		};
+		D8058ACA2B06CE52003D9F37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ackatz.seclookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = seclook;
+			};
+			name = Debug;
+		};
+		D8058ACB2B06CE52003D9F37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = Q48Q39Z6A9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ackatz.seclookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = seclook;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8058A992B06CE51003D9F37 /* Build configuration list for PBXProject "seclook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8058AC12B06CE52003D9F37 /* Debug */,
+				D8058AC22B06CE52003D9F37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8058AC32B06CE52003D9F37 /* Build configuration list for PBXNativeTarget "seclook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8058AC42B06CE52003D9F37 /* Debug */,
+				D8058AC52B06CE52003D9F37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8058AC62B06CE52003D9F37 /* Build configuration list for PBXNativeTarget "seclookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8058AC72B06CE52003D9F37 /* Debug */,
+				D8058AC82B06CE52003D9F37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8058AC92B06CE52003D9F37 /* Build configuration list for PBXNativeTarget "seclookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8058ACA2B06CE52003D9F37 /* Debug */,
+				D8058ACB2B06CE52003D9F37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D84EEB1C2B44BE7C00AD7B13 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D84EEB1D2B44BE7C00AD7B13 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D84EEB1C2B44BE7C00AD7B13 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D8058A962B06CE51003D9F37 /* Project object */;
+}
