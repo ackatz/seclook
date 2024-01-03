@@ -1,5 +1,7 @@
 # seclook
 
+#### Automatic security lookups from your clipboard
+
 seclook is a macOS/Swift app that sits in the background and monitors your clipboard, sending any IP, SHA2/MD5 hash, or domain to VirusTotal and AbuseIPDB. If any scanned item has a bad reputation score, you get a notification!
 
 ## Features
