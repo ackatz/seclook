@@ -1,8 +1,8 @@
 cask "seclook" do
     version "1.1"
-    sha256 "4db38da0c68a612812c2cbdb0aa8cbbc45f0d7ca86dd79717f2cf009527ba0be"
+    sha256 "9f1be78d65bd1e84ec520ed7630e40be1688166521076961832eb9bb38d6e91b"
   
-    url "https://github.com/nicknacnic/seclook/archive/refs/tags/1.1.tar.gz"
+    url "https://github.com/nicknacnic/seclook/releases/download/1.1/seclook.dmg"
     name "seclook"
     desc "Automatic security lookups from your clipboard."
     homepage "https://github.com/ackatz/seclook"
