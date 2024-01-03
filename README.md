@@ -26,6 +26,8 @@ seclook is a macOS/Swift app that sits in the background and monitors your clipb
 
 Download the latest Mac release [**here**](https://github.com/ackatz/seclook/raw/main/Releases/seclook.dmg). 
 
+To start the app automatically at start up, add it to the "Open at Login" list in Settings > Login Items
+
 ## Contributions
 
 I'm happy to merge contributions that fit my vision for the app (simple, background app). Bug fixes and more tests are always welcome.
