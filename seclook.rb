@@ -1,6 +1,6 @@
 cask "seclook" do
     version "1.0"
-    sha256 "d01e127925f6c201cc80ec1dc7d4849e4e208e2833ebae5ab4f90e3c8ab0c007"
+    sha256 "2513b62d54613a6e5eb30fef832e59f062e37066c913fd204dd22cec7dc6cb20"
   
     url "https://github.com/nicknacnic/seclook/archive/refs/tags/1.0.tar.gz"
     name "seclook"
