@@ -4,7 +4,7 @@ import UserNotifications
 func postNotification(for item: String, type: String, source: String) {
     print("Posting notification for \(item) from \(source)")
     let notificationContent = UNMutableNotificationContent()
-    notificationContent.sound = .default
+    notificationContent.sound = UNNotificationSound.default
 
     switch source {
         case "AbuseIPDB":

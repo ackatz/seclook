@@ -58,7 +58,7 @@ struct CheckForUpdatesView: View {
 }
 
 
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
     var statusBar: StatusBarController?
     var isAppActive: Bool = true
     var clipboardMonitor: ClipboardMonitor
@@ -70,6 +70,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        
+        UNUserNotificationCenter.current().delegate = self
 
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { granted, error in
             if let error = error {
@@ -85,6 +87,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.toggleApp()
         }
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                 willPresent notification: UNNotification,
+                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+         completionHandler([.banner, .sound])
+     }
     
     func toggleApp() {
         print("App Active State: \(isAppActive)") // Debug print
