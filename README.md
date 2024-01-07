@@ -4,7 +4,7 @@
 
 seclook is a macOS/Swift app that sits in the background and monitors your clipboard, sending any IP, SHA2/MD5 hash, or domain to VirusTotal and AbuseIPDB. If any scanned item has a bad reputation score, you get a notification!
 
-![seclook UI](https://seclook.app/static/ui.svg)
+![seclook UI](images/ui.png)
 
 ## Features
 
@@ -13,6 +13,7 @@ seclook is a macOS/Swift app that sits in the background and monitors your clipb
   * SHA2 hashes
   * MD5 hashes
   * Domains
+* A confirmation alert window will always show before sending SHA2 and MD5 hashes
 * Receive notifications through macOS Notification Center when a scanned item has a bad reputation score
 * Send scanned items to the following security lookup services:
   * VirusTotal
@@ -44,7 +45,9 @@ seclook only sends the regex'ed string that was found (e.g., a single IP address
 
 ### What does seclook do if I copy a password?
 
-Generally, you don't have to worry about your passwords being sent to lookup services as people's passwords are *generally not* a qualified string type (i.e., IP address, SHA2/MD5 hash, or domain).
+To protect against sending passwords to lookup services, seclook will always ask you before sending SHA2 and MD5 hashes to lookup services.
+
+![confirmation](images/confirm.png)
 
 #### A note on Password Managers
 
@@ -54,12 +57,11 @@ seclook does not detect username/password combinations that are input from **aut
 
 ##### Desktop Apps + Manual Copy
 
-If you manually copy a hash value (i.e., API key) from a password manager **desktop app** that sets `org.nspasteboard.ConcealedType` (see [NSPasteboard](http://nspasteboard.org/)) for copied data (i.e., 1Password Desktop app), seclook will ignore the clipboard value and not send anything to lookup services.
+If you manually copy any value from a password manager **desktop app** that sets `org.nspasteboard.ConcealedType` (see [NSPasteboard](http://nspasteboard.org/)) for copied data (i.e., 1Password Desktop app), seclook will ignore the clipboard value.
 
 ##### Browser Extensions + Manual Copy
 
-If you manually copy a hash value from a password manager **browser extension**, there is not currently a way to detect `org.nspasteboard.ConcealedType` in this case, and seclook will send the hash value to lookup services. If you are concerned about this, you can disable scanning for SHA2/MD5 hashes in seclook's Settings pane.
-
+If you manually copy from a password manager **browser extension**, there is not currently a way to detect `org.nspasteboard.ConcealedType` in this case. seclook will still prompt you to confirm before sending any regex'ed hash values to lookup services.
 
 ## Thanks
 
