@@ -4,7 +4,7 @@ class ClipboardMonitor: ObservableObject {
     
     // Set ConcealedTypeIdentifier for ignoring confidential information
     private let ConcealedTypeIdentifier = NSPasteboard.PasteboardType("org.nspasteboard.ConcealedType")
-    
+    private let popupWindowController = PopupWindowController()
     private let maxClipboardSize = 1000
     private var timer: Timer?
     private var lastCheckedItem: String = ""
@@ -63,13 +63,23 @@ class ClipboardMonitor: ObservableObject {
                     print("\(itemWithContentType) is in the ignore list and will be ignored.")
                     return
                 }
+                
+                if (contentType == "SHA256" && checkSHA256) || (contentType == "MD5" && checkMD5) {
+                    
+                    self.lastCheckedItem = matchedContent
+                    popupWindowController.showPopupWindow(contentType: contentType, onScan: {
+                        APIService.checkVirusTotal(content: matchedContent, type: contentType) { _ in }
+                        
+                        self.lastScannedItem = itemWithContentType
+                           })
+                }
 
                 switch contentType {
                 case "IP":
                     if checkIP {
                         APIService.checkAbuseIPDB(ip: matchedContent) { _ in }
                         APIService.checkVirusTotal(content: matchedContent, type: "IP") { _ in }
-
+                        
                         lastCheckedItem = matchedContent
                         self.lastScannedItem = itemWithContentType
                     }
@@ -78,22 +88,6 @@ class ClipboardMonitor: ObservableObject {
                     if checkDomain {
                         APIService.checkVirusTotal(content: matchedContent, type: "Domain") { _ in }
                     
-                        lastCheckedItem = matchedContent
-                        self.lastScannedItem = itemWithContentType
-                    }
-
-                case "SHA256":
-                    if checkSHA256 {
-                        APIService.checkVirusTotal(content: matchedContent, type: "SHA256") { _ in }
-                    
-                        lastCheckedItem = matchedContent
-                        self.lastScannedItem = itemWithContentType
-                    }
-
-                case "MD5":
-                    if checkMD5 {
-                        APIService.checkVirusTotal(content: matchedContent, type: "MD5") { _ in }
-
                         lastCheckedItem = matchedContent
                         self.lastScannedItem = itemWithContentType
                     }

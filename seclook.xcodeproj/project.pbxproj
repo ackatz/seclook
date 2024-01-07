@@ -22,6 +22,8 @@
 		D86BD3272B437B99008CBE03 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D86BD3262B437B99008CBE03 /* Credits.rtf */; };
 		D86BD32B2B4385DC008CBE03 /* IgnoreListManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86BD3292B4385B0008CBE03 /* IgnoreListManagerTests.swift */; };
 		D86BD32E2B43860D008CBE03 /* ConfigManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86BD32C2B4385FC008CBE03 /* ConfigManagerTests.swift */; };
+		D88063E42B4B1C250096255D /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88063E32B4B1C250096255D /* PopupView.swift */; };
+		D88063E62B4B1C470096255D /* PopupWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88063E52B4B1C470096255D /* PopupWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		D86BD3262B437B99008CBE03 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		D86BD3292B4385B0008CBE03 /* IgnoreListManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreListManagerTests.swift; sourceTree = "<group>"; };
 		D86BD32C2B4385FC008CBE03 /* ConfigManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManagerTests.swift; sourceTree = "<group>"; };
+		D88063E32B4B1C250096255D /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		D88063E52B4B1C470096255D /* PopupWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 				D8058ADC2B07F060003D9F37 /* ConfigurationView.swift */,
 				D8058ADE2B0829CC003D9F37 /* UserNotifications.swift */,
 				D86BD3262B437B99008CBE03 /* Credits.rtf */,
+				D88063E32B4B1C250096255D /* PopupView.swift */,
+				D88063E52B4B1C470096255D /* PopupWindowController.swift */,
 			);
 			path = seclook;
 			sourceTree = "<group>";
@@ -295,6 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88063E62B4B1C470096255D /* PopupWindowController.swift in Sources */,
+				D88063E42B4B1C250096255D /* PopupView.swift in Sources */,
 				D8058AA42B06CE51003D9F37 /* ContentView.swift in Sources */,
 				D8058ADD2B07F060003D9F37 /* ConfigurationView.swift in Sources */,
 				D8058ACF2B06E385003D9F37 /* IgnoreListManager.swift in Sources */,
@@ -471,7 +479,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"seclook/Preview Content\"";
 				DEVELOPMENT_TEAM = Q48Q39Z6A9;
@@ -485,7 +493,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ackatz.seclook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -504,7 +512,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"seclook/Preview Content\"";
 				DEVELOPMENT_TEAM = Q48Q39Z6A9;
@@ -519,7 +527,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ackatz.seclook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
