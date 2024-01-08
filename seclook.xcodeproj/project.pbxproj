@@ -61,7 +61,6 @@
 		D8058ADE2B0829CC003D9F37 /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
 		D8381FB12B43996700200FB7 /* seclook.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = seclook.xctestplan; sourceTree = "<group>"; };
 		D84EEB232B44C41900AD7B13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D85D231A2B44A73B003D9F96 /* seclookRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = seclookRelease.entitlements; sourceTree = "<group>"; };
 		D86BD3262B437B99008CBE03 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		D86BD3292B4385B0008CBE03 /* IgnoreListManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreListManagerTests.swift; sourceTree = "<group>"; };
 		D86BD32C2B4385FC008CBE03 /* ConfigManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManagerTests.swift; sourceTree = "<group>"; };
@@ -119,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				D84EEB232B44C41900AD7B13 /* Info.plist */,
-				D85D231A2B44A73B003D9F96 /* seclookRelease.entitlements */,
 				D86BD3282B438590008CBE03 /* seclookTests */,
 				D8058AA12B06CE51003D9F37 /* seclookApp.swift */,
 				D8058AA32B06CE51003D9F37 /* ContentView.swift */,
@@ -479,7 +477,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"seclook/Preview Content\"";
 				DEVELOPMENT_TEAM = Q48Q39Z6A9;
@@ -493,7 +491,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ackatz.seclook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -507,12 +505,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = seclook/seclookRelease.entitlements;
+				CODE_SIGN_ENTITLEMENTS = seclook/seclook.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"seclook/Preview Content\"";
 				DEVELOPMENT_TEAM = Q48Q39Z6A9;
@@ -527,7 +525,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ackatz.seclook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
