@@ -28,7 +28,7 @@ struct PopupView: View {
             }
             Text("Auto-closing in 10s...")
                 .font(.subheadline)
-                .foregroundColor(.white)
+                .foregroundColor(.gray)
                 .padding(.top, 1.0)
         }
         .padding()
