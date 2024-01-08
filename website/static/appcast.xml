@@ -3,6 +3,22 @@
     <channel>
         <title>seclook</title>
         <item>
+            <title>1.2</title>
+            <pubDate>Sun, 07 Jan 2024 17:23:02 -0700</pubDate>
+            <sparkle:version>1.2</sparkle:version>
+            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+              <description><![CDATA[
+                <h2>What's New</h2>
+                <ul>
+                    <li>Fixed automatic updates</li>
+                    <li>seclook will prompt you with a small window in the top right of your screen before scanning any SHA2 or MD5 hash. This change is to prevent accidental scanning of confidential values.</li>
+                    <li>Fixed an issue where macOS notifications would sometimes be buried in the Notification Center and not immediately display in the top-right of your screen when triggered.</li>
+                </ul>
+                ]]></description>
+            <enclosure url="https://github.com/ackatz/seclook/raw/main/Releases/seclook.dmg" length="4596832" type="application/octet-stream" sparkle:edSignature="9V4Won4QBidsXqEWEfRL0nP2iTLxghue3nHg54eZyY6MDjteOH6IP7kVthMD1Eg52QnFF2BLVzFpSlKC8W8YDw=="/>
+        </item>
+        <item>
             <title>1.1</title>
             <pubDate>Sun, 07 Jan 2024 15:30:10 -0700</pubDate>
             <sparkle:version>1.1</sparkle:version>
@@ -14,8 +30,7 @@
                     <li>seclook will prompt you with a small window in the top right of your screen before scanning any SHA2 or MD5 hash. This change is to prevent accidental scanning of confidential values.</li>
                     <li>Fixed an issue where macOS notifications would sometimes be buried in the Notification Center and not immediately display in the top-right of your screen when triggered.</li>
                 </ul>
-                ]]>
-            </description>
+                ]]></description>
             <enclosure url="https://github.com/ackatz/seclook/raw/main/Releases/seclook.dmg" length="4748384" type="application/octet-stream" sparkle:edSignature="80Dj+HVGI5YGKfJ4dJQShiqexL3y4LbOXsNIEvGBLL9SLDGqqdS5AHcfWdmFO8kfCA+HtppxG6jbya/vlebSDQ=="/>
         </item>
         <item>
