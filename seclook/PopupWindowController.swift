@@ -19,7 +19,10 @@ class PopupWindowController {
             popupWindow = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 200, height: 100),
                                    styleMask: [.borderless],
                                    backing: .buffered,
-                                   defer: false)
+                                   defer: false
+                                   )
+            // Ensure alert window is brought to front
+            popupWindow?.level = .floating
             popupWindow?.contentViewController = hostingController
             positionWindow(popupWindow!)
         } else {
