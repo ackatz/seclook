@@ -95,7 +95,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
      }
     
     func toggleApp() {
-        print("App Active State: \(isAppActive)") // Debug print
         isAppActive.toggle()
         if isAppActive {
             clipboardMonitor.startMonitoring()
