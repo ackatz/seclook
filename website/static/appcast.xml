@@ -3,6 +3,27 @@
     <channel>
         <title>seclook</title>
         <item>
+            <title>1.5</title>
+            <pubDate>Fri, 17 May 2024 13:12:26 -0600</pubDate>
+            <sparkle:version>1.5</sparkle:version>
+            <sparkle:shortVersionString>1.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+              <description><![CDATA[
+                <b>Note: If you are on <=v1.1, uninstall the app and reinstall with the latest version to enable automatic updates</b>
+                <h2>What's New</h2>
+                <ul>
+                    <li>The app now supports looking up IOCs in ThreatFox! The ThreatFox integration supports IPs, SHA2 and MD5 hashes, and domains.</li>
+                    <li>The app now supports looking up IOCs in GreyNoise! The GreyNoise integration supports IPs.</li>
+                    <li>You can now enable/disable lookups (e.g., VirusTotal, GreyNoise, etc.) within the Settings pane.</li>
+                    <li>There is now a visual confirmation when you save your API keys.</li>
+                    <li>Fixed a bug where the IP regex would miss the last digit in the 4th octet.</li>
+                    <li>Fixed a bug where SHA1 hashes were being incorrectly identified as MD5 hashes due to overlapping regex patterns.</li>
+                    <li>Fixed a bug where settings changes following hitting the "Clear All Settings" button were not persisting after a restart of the app.</li>
+                </ul>
+                ]]></description>
+            <enclosure url="https://github.com/ackatz/seclook/raw/main/Releases/seclook.dmg" length="15020544" type="application/octet-stream" sparkle:edSignature="Vpn9NDFRXMHmzpOoOcYEXxLUAabUORCCPvgSR213/a6eDv/gH5PYdhX/Qmb7QBgbBMdGlsn52wqQRFlH7aBGBQ=="/>
+        </item>
+        <item>
             <title>1.4</title>
             <pubDate>Tue, 09 Jan 2024 16:51:27 -0700</pubDate>
             <sparkle:version>1.4</sparkle:version>

@@ -2,7 +2,7 @@
 
 #### Automatic security lookups from your clipboard
 
-seclook is a macOS/Swift app that sits in the background and monitors your clipboard, sending any IP, SHA2/MD5 hash, or domain to VirusTotal and AbuseIPDB. If any scanned item has a bad reputation score, you get a notification!
+seclook is a macOS/Swift app that sits in the background and monitors your clipboard, sending any IP, SHA2/MD5 hash, or domain to services like AbuseIPDB, VirusTotal, GreyNoise, and more. If any scanned item has a bad reputation score, you get a notification!
 
 ![seclook UI](images/ui.png)
 
@@ -18,10 +18,13 @@ seclook is a macOS/Swift app that sits in the background and monitors your clipb
 * Send scanned items to the following security lookup services:
   * VirusTotal
   * AbuseIPDB
+  * ThreatFox
+  * GreyNoise
 * Add known-good items to an Ignore List
 * Toggle scanning on/off:
   * Universally using menu bar icon
   * By string type
+  * By integration/lookup service
 
 ## Installation
 
@@ -65,4 +68,8 @@ If you manually copy from a password manager **browser extension**, there is not
 
 ## Thanks
 
-* [VirusTotal](https://www.virustotal.com/) and [AbuseIPDB](https://www.abuseipdb.com/) for their awesome APIs
+* Thanks to these organizations for their awesome APIs:
+  * [VirusTotal](https://www.virustotal.com/)
+  * [AbuseIPDB](https://www.abuseipdb.com/) 
+  * [ThreatFox](https://threatfox.abuse.ch/)
+  * [GreyNoise](https://greynoise.io)
