@@ -426,7 +426,6 @@ struct ContentView: View {
         .background(Color(red: 0.11764705882352941, green: 0.11764705882352941, blue: 0.11764705882352941))
         .onAppear {
             // Load the API keys when the view appears
-            print("ContentView loaded. Last scanned item: \(clipboardMonitor.lastScannedItem)")
             abuseIPDBKey = ConfigManager.shared.getAPIKey(service: "abuseipdb") ?? ""
             VirusTotalKey = ConfigManager.shared.getAPIKey(service: "virustotal") ?? ""
             ThreatFoxKey = ConfigManager.shared.getAPIKey(service: "threatfox") ?? ""
