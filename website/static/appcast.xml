@@ -21,7 +21,7 @@
                     <li>Fixed a bug where settings changes following hitting the "Clear All Settings" button were not persisting after a restart of the app.</li>
                 </ul>
             ]]></description>
-            <enclosure url="https://seclook.app/seclook.dmg" length="4641888" type="application/octet-stream" sparkle:edSignature="vnZ2HOsYDVIGf5IhvvYbNU2NT1dcRsnxhsWWKxTmS+z56wu6ON7knwCSR7fncL8K2sHcHVdYaGiq2Jh9s3peAA=="/>
+            <enclosure url="https://github.com/ackatz/seclook/raw/main/Releases/seclook.dmg" length="4641888" type="application/octet-stream" sparkle:edSignature="vnZ2HOsYDVIGf5IhvvYbNU2NT1dcRsnxhsWWKxTmS+z56wu6ON7knwCSR7fncL8K2sHcHVdYaGiq2Jh9s3peAA=="/>
         </item>
         <item>
             <title>1.4</title>
