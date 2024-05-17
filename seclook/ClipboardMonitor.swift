@@ -41,7 +41,12 @@ class ClipboardMonitor: ObservableObject {
         let checkSHA256 = UserDefaults.standard.bool(forKey: "checkSHA256")
         let checkMD5 = UserDefaults.standard.bool(forKey: "checkMD5")
         let checkDomain = UserDefaults.standard.bool(forKey: "checkDomain")
-        
+
+        let enableAbuseIPDB = UserDefaults.standard.bool(forKey: "enableAbuseIPDB")
+        let enableVirusTotal = UserDefaults.standard.bool(forKey: "enableVirusTotal")
+        let enableThreatFox = UserDefaults.standard.bool(forKey: "enableThreatFox")
+        let enableGreyNoise = UserDefaults.standard.bool(forKey: "enableGreyNoise")
+
         let pasteboard = NSPasteboard.general
         
         // Check for Concealed Type
@@ -65,29 +70,45 @@ class ClipboardMonitor: ObservableObject {
                 }
                 
                 if (contentType == "SHA256" && checkSHA256) || (contentType == "MD5" && checkMD5) {
-                    
                     self.lastCheckedItem = matchedContent
                     popupWindowController.showPopupWindow(contentType: contentType, onScan: {
-                        APIService.checkVirusTotal(content: matchedContent, type: contentType) { _ in }
-                        
+                        if enableVirusTotal {
+                            APIService.checkVirusTotal(content: matchedContent, type: contentType) { _ in }
+                        }
+                        if enableThreatFox {
+                            APIService.checkThreatFox(content: matchedContent, type: contentType) { _ in }
+                        }
                         self.lastScannedItem = itemWithContentType
-                           })
+                    })
                 }
 
                 switch contentType {
                 case "IP":
                     if checkIP {
-                        APIService.checkAbuseIPDB(ip: matchedContent) { _ in }
-                        APIService.checkVirusTotal(content: matchedContent, type: "IP") { _ in }
-                        
+                        if enableAbuseIPDB {
+                            APIService.checkAbuseIPDB(ip: matchedContent) { _ in }
+                        }
+                        if enableVirusTotal {
+                            APIService.checkVirusTotal(content: matchedContent, type: contentType) { _ in }
+                        }
+                        if enableThreatFox {
+                            APIService.checkThreatFox(content: matchedContent, type: contentType) { _ in }
+                        }
+                        if enableGreyNoise {
+                            APIService.checkGreyNoise(content: matchedContent, type: contentType) { _ in }
+                        }
                         lastCheckedItem = matchedContent
                         self.lastScannedItem = itemWithContentType
                     }
 
                 case "Domain":
                     if checkDomain {
-                        APIService.checkVirusTotal(content: matchedContent, type: "Domain") { _ in }
-                    
+                        if enableVirusTotal {
+                            APIService.checkVirusTotal(content: matchedContent, type: contentType) { _ in }
+                        }
+                        if enableThreatFox {
+                            APIService.checkThreatFox(content: matchedContent, type: contentType) { _ in }
+                        }
                         lastCheckedItem = matchedContent
                         self.lastScannedItem = itemWithContentType
                     }
@@ -105,20 +126,22 @@ class ClipboardMonitor: ObservableObject {
     }
 
 
+
     private func isIPAddress(_ string: String) -> String? {
-        let ipRegex = "(?!(?:127\\.0\\.0\\.1|10(?:\\.\\d{1,3}){3}|172\\.(?:1[6-9]|2\\d|3[01])(?:\\.\\d{1,3}){2}|192\\.168(?:\\.\\d{1,3}){2}))(?:[1-9]\\d?|1\\d{2}|2[0-4]\\d|25[0-5])\\.(?:[1-9]\\d?|1\\d{2}|2[0-4]\\d|25[0-5])\\.(?:[1-9]\\d?|1\\d{2}|2[0-4]\\d|25[0-5])\\.(?!0\\b)(?:[1-9]\\d?|1\\d{2}|2[0-4]\\d|25[0-5])"
-           do {
-               let regex = try NSRegularExpression(pattern: ipRegex)
-               let nsrange = NSRange(string.startIndex..<string.endIndex, in: string)
-               if let match = regex.firstMatch(in: string, options: [], range: nsrange) {
-                   let ipRange = Range(match.range, in: string)!
-                   return String(string[ipRange])
-               }
-           } catch {
-               print("Invalid regex: \(error.localizedDescription)")
-           }
-           return nil
-       }
+        let ipRegex = "(?!(?:127\\.0\\.0\\.1|10(?:\\.\\d{1,3}){3}|172\\.(?:1[6-9]|2\\d|3[01])(?:\\.\\d{1,3}){2}|192\\.168(?:\\.\\d{1,3}){2}))(?:[0-9]{1,3})\\.(?:[0-9]{1,3})\\.(?:[0-9]{1,3})\\.(?:[0-9]{1,3})"
+        do {
+            let regex = try NSRegularExpression(pattern: ipRegex)
+            let nsrange = NSRange(string.startIndex..<string.endIndex, in: string)
+            if let match = regex.firstMatch(in: string, options: [], range: nsrange) {
+                let ipRange = Range(match.range, in: string)!
+                return String(string[ipRange])
+            }
+        } catch {
+            print("Invalid regex: \(error.localizedDescription)")
+        }
+        return nil
+    }
+
 
        private func isSHA256Hash(_ string: String) -> String? {
            let sha256Regex = "[A-Fa-f0-9]{64}"
@@ -136,21 +159,21 @@ class ClipboardMonitor: ObservableObject {
            return nil
        }
 
-       private func isMD5Hash(_ string: String) -> String? {
-           let md5Regex = "[A-Fa-f0-9]{32}"
-           
-           do {
-               let regex = try NSRegularExpression(pattern: md5Regex)
-               let nsrange = NSRange(string.startIndex..<string.endIndex, in: string)
-               if let match = regex.firstMatch(in: string, options: [], range: nsrange) {
-                   let md5Range = Range(match.range, in: string)!
-                   return String(string[md5Range])
-               }
-           } catch {
-               print("Invalid regex: \(error.localizedDescription)")
-           }
-           return nil
-       }
+    private func isMD5Hash(_ string: String) -> String? {
+        let md5Regex = "(?<![A-Fa-f0-9])[A-Fa-f0-9]{32}(?![A-Fa-f0-9])"
+        
+        do {
+            let regex = try NSRegularExpression(pattern: md5Regex)
+            let nsrange = NSRange(string.startIndex..<string.endIndex, in: string)
+            if let match = regex.firstMatch(in: string, options: [], range: nsrange) {
+                let md5Range = Range(match.range, in: string)!
+                return String(string[md5Range])
+            }
+        } catch {
+            print("Invalid regex: \(error.localizedDescription)")
+        }
+        return nil
+    }
 
        private func isDomain(_ string: String) -> String? {
            let domainRegex = "https?://[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
@@ -170,28 +193,29 @@ class ClipboardMonitor: ObservableObject {
     
     private func determineContentType(_ string: String) -> (String, String) {
         let checkIP = UserDefaults.standard.bool(forKey: "checkIP")
-            let checkSHA256 = UserDefaults.standard.bool(forKey: "checkSHA256")
-            let checkMD5 = UserDefaults.standard.bool(forKey: "checkMD5")
-            let checkDomain = UserDefaults.standard.bool(forKey: "checkDomain")
+        let checkSHA256 = UserDefaults.standard.bool(forKey: "checkSHA256")
+        let checkMD5 = UserDefaults.standard.bool(forKey: "checkMD5")
+        let checkDomain = UserDefaults.standard.bool(forKey: "checkDomain")
 
-            // Prioritize checking based on user preferences
-            if checkIP, let ip = isIPAddress(string) {
-                return (ip, "IP")
-            }
+        // Prioritize checking based on user preferences
+        if checkIP, let ip = isIPAddress(string) {
+            return (ip, "IP")
+        }
         
-            if checkSHA256, let sha256 = isSHA256Hash(string) {
-                return (sha256, "SHA256")
-            }
+        if checkSHA256, let sha256 = isSHA256Hash(string) {
+            return (sha256, "SHA256")
+        }
         
-            if checkMD5, let md5 = isMD5Hash(string) {
-                return (md5, "MD5")
-            }
+        if checkMD5, let md5 = isMD5Hash(string) {
+            return (md5, "MD5")
+        }
         
-            if checkDomain, let domain = isDomain(string) {
-                return (domain, "Domain")
-            }
+        if checkDomain, let domain = isDomain(string) {
+            return (domain, "Domain")
+        }
         
         return (string, "Unknown")
     }
+
     
 }
