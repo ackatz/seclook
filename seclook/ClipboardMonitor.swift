@@ -128,7 +128,9 @@ class ClipboardMonitor: ObservableObject {
 
 
     private func isIPAddress(_ string: String) -> String? {
-        let ipRegex = "(?!(?:127\\.0\\.0\\.1|10(?:\\.\\d{1,3}){3}|172\\.(?:1[6-9]|2\\d|3[01])(?:\\.\\d{1,3}){2}|192\\.168(?:\\.\\d{1,3}){2}))(?:[0-9]{1,3})\\.(?:[0-9]{1,3})\\.(?:[0-9]{1,3})\\.(?:[0-9]{1,3})"
+        let ipRegex = """
+        (?<!\\d)(?!(?:10(?:\\.\\d{1,3}){3}|172\\.(?:1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2}|192\\.168(?:\\.\\d{1,3}){2}))(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?!\\d)
+        """
         do {
             let regex = try NSRegularExpression(pattern: ipRegex)
             let nsrange = NSRange(string.startIndex..<string.endIndex, in: string)
@@ -141,6 +143,8 @@ class ClipboardMonitor: ObservableObject {
         }
         return nil
     }
+
+
 
 
        private func isSHA256Hash(_ string: String) -> String? {
